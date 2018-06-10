@@ -31,6 +31,7 @@ var fm = template.FuncMap{
 }
 
 func init() {
+	// Create tamplate, attach function map, THEN parse the file
 	tpl = template.Must(template.New("").Funcs(fm).ParseFiles("tpl.gohtml"))
 }
 
