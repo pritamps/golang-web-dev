@@ -13,6 +13,7 @@ func init() {
 }
 
 func main() {
+	// This variable is passed into the template
 	err := tpl.ExecuteTemplate(os.Stdout, "tpl.gohtml", `Release self-focus; embrace other-focus.`)
 	if err != nil {
 		log.Fatalln(err)
