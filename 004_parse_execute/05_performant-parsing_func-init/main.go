@@ -9,6 +9,8 @@ import (
 var tpl *template.Template
 
 func init() {
+
+	// init runs ONCE when program starts
 	tpl = template.Must(template.ParseGlob("templates/*"))
 }
 

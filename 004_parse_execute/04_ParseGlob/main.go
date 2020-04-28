@@ -7,6 +7,8 @@ import (
 )
 
 func main() {
+	// BEST PRACTICE:
+	// USE ParseGlob (not ParseFiles), use ExecuteTemplate (not Execute)
 	tpl, err := template.ParseGlob("templates/*")
 	if err != nil {
 		log.Fatalln(err)

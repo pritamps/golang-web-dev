@@ -22,6 +22,7 @@ func main() {
 		log.Fatalln(err)
 	}
 
+	// Use execute template when you have more than one template parsed in the variable
 	err = tpl.ExecuteTemplate(os.Stdout, "vespa.gmao", nil)
 	if err != nil {
 		log.Fatalln(err)
@@ -37,6 +38,7 @@ func main() {
 		log.Fatalln(err)
 	}
 
+	// Will execute first available template
 	err = tpl.Execute(os.Stdout, nil)
 	if err != nil {
 		log.Fatalln(err)
